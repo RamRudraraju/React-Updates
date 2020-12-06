@@ -9,7 +9,8 @@ class App extends React.Component {
 
 	onSearchSubmit = async (entry) => {   // This ultimatly Invocked 
 		const response = await axios.get(`https://pixabay.com/api/?key=12973143-e1ea73fe98fc5af5156bb3056&q=${entry}&image_type=photo`)
-		this.setState({images:response.data.hits})
+		console.log(response.data.hits);
+		this.setState({images:response.data.hits})  // setState Functionality 
 	}
 
 	render() {
